@@ -13,6 +13,7 @@ const vans=[
 
 
 function getVan(id){
+    id=Number(id)
     return vans.filter(el=>el.id===id)[0]
 }
 

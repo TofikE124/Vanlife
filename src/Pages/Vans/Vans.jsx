@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import vans from "../data.js"
-import { getVan } from "../data.js"
+import vans from "../../data.js"
+import { getVan } from "../../data.js"
 
 
-import Van from "../Components/Van"
+import Van from "../../Components/Van.jsx"
 
 export default function Home(){
 
