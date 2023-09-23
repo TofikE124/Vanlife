@@ -37,6 +37,7 @@ img{
   width: 90%;
   margin: 0 auto;
   display: grid;
+  align-items: flex-start;
 }
 
 
@@ -55,6 +56,13 @@ button,a{
   text-align: center;
   border: none;
   text-decoration: none;
+}
+
+
+
+:root{
+  --text-color-primary:#161616;
+  --dark-gray:#4D4D4D;
 }
 
 /*===============
@@ -82,7 +90,7 @@ a.title{
 nav a{
   font-size: 1rem;
   text-decoration: none;
-  color: #4D4D4D;
+  color: var(--dark-gray);
   margin-left: 0.75em;
   text-align: right;
 }
@@ -113,13 +121,13 @@ footer p {
 /* About */
 
 
-.about-subtitle,
+.about-title,
 .about-desc,
 .about-footer{
-  color: #161616;
+  color: var(--text-color-primary);
 }
 
-.about-subtitle{
+.about-title{
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.185;
@@ -143,6 +151,74 @@ footer p {
   font-size: 1rem;
   color: white;
 }
+
+
+/* Vans page */
+
+
+.vans-page-title{
+  color: var(--text-color-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.filter-btn{
+  color: var(--dark-gray);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.clear-filters-btn{
+  font-size: 1rem;
+  color: var(--dark-gray);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+
+.van-name,
+.van-price{
+  font-size: 1.25rem;
+  color: var(--text-color-primary);
+  font-weight: 600;
+  line-height: 1.58;
+}
+
+
+.van-price{
+  display: flex;
+  flex-direction: column;
+  margin-bottom:0;
+}
+
+
+.van-price span{
+  color: var(--text-color-primary);
+  font-size: 0.825rem;
+  font-weight: 500;
+  line-height: 2.26;
+  text-align: right;
+  margin-top:-1em;
+  /* position: absolute;
+  top: 1.2em;
+  left: 1em; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -190,7 +266,7 @@ footer p {
 
 .explore-btn{
   border-radius: 10px;
-  background: #161616;
+  background: var(--text-color-primary);
   padding: 0.75em 1.375em;
   text-decoration: none;
   display: block;
@@ -199,7 +275,7 @@ footer p {
 }
 
 
-.about-subtitle{
+.about-title{
   margin: 1.5em 0 0;
 }
 
@@ -211,3 +287,91 @@ footer p {
   display: block;
   margin: 3.5em 0;
 }
+
+
+/* Vans Page */
+
+
+.vans-page{
+  min-height: 85vh;
+  margin-top: 3.375em;
+  margin-bottom: 6.875em;
+}
+
+.vans-page-title{
+  margin: 0s;
+}
+
+.filter-vans-container{
+  display: flex;
+  align-items: baseline;
+  margin: 1.75em 0 3.875em;
+}
+
+.filter-btn{
+  background: #FFEAD0;
+  border-radius: 5px;
+  padding: 0.5em 1.5em;
+  margin-right: 1.25em;
+  text-decoration: none;
+  width: fit-content;
+}    
+
+
+.filter-simple:hover,
+.filter-simple:focus,
+.filter-simple.filter-active{
+  background: #E17654;
+  color:white;
+}
+
+
+.filter-rugged:hover,
+.filter-rugged:focus,
+.filter-rugged.filter-active{
+  background: #115E59;
+  color:white;
+}
+
+
+.filter-luxury:hover,
+.filter-luxury:focus,
+.filter-luxury.filter-active{
+  background:#161616;
+  color:white;
+}
+
+
+.clear-filters-btn{
+  margin-left: auto;
+}
+
+
+
+/* Van */
+
+
+.vans-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:2em 1.5em;
+}
+
+
+.van a{
+  text-decoration: none;
+}
+
+
+.van-img{
+  border-radius: 5px;
+  margin: 0;
+}
+
+
+.van-info{
+  margin: 0.5em 0;
+  display: flex;
+  justify-content: space-between;
+}
+

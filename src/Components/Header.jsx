@@ -7,7 +7,7 @@ export default function Header(){
         <header>
             <div className="container">
                 <nav>
-                    <Link to="/" className="title">#Vaanlife</Link>
+                    <Link to="/" className="title">#Vanlife</Link>
                     <Link to="about">About</Link>
                     <Link to="vans">Vans</Link>
                 </nav>     
