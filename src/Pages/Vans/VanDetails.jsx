@@ -1,24 +1,35 @@
 import React, { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
-import { getVan } from "../../data"
+import { Link, useLocation, useParams } from "react-router-dom"
+import { getVan } from "../../firebase"
 
 export default function VanDetails(){
 
+    const location = useLocation()
+    const searchParams = location.state?.search
+    const sp = new URLSearchParams(searchParams)
+
     const params = useParams()
+
     const [van,setVan] = useState(null)
 
+
     useEffect(()=>{
-        setVan(getVan(params.id))
+        getVan(params.id)
+            .then(data=>{
+                setVan(data)
+            })
     },[params])
+
+
 
 
     return(
         van?
             <div className="van-details">
                 <div className="container">
-                    <Link to="/vans" className="back-to-vans">
+                    <Link to={`..${searchParams}`} relative="path" className="back-to-vans">
                         <span>←</span> 
-                        <p>Back to all vans </p>
+                        <p>Back to {sp.get('type')||'all'} vans </p>
                     </Link>
                     <img className="van-details-img" src={van.imageUrl} />
                     <div className={`filter-btn filter-${van.type}  filter-active`}>{van.type}</div>

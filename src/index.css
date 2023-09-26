@@ -11,20 +11,30 @@ body{
   line-height: 1.5;
   min-height: 100vh;
   max-width: 100vw;
+  background:#FFF7ED;
 }
 
 header{
-  background:#FFF7ED;
   padding: 2em 0;
+}
+
+header nav{
+  align-items: center;
+}
+
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 footer{
   background: #252525;
-  display: grid;
-  place-content: center;
   padding: 0.5em 0;
-  bottom: 0;
+  display: block;
+  margin-top: auto;
   width: 100%;
+  text-align: center;
 }
 
 img{
@@ -87,11 +97,15 @@ a.title{
   text-align: left;
 }
 
+a.title:hover{
+  text-decoration: none;
+}
+
 nav a{
   font-size: 1rem;
   text-decoration: none;
   color: var(--dark-gray);
-  margin-left: 0.75em;
+  margin-left:1.5em;
   text-align: right;
 }
 
@@ -146,7 +160,7 @@ footer p {
   line-height: 1.25;
 }
 
-.explore-btn{
+.secondary-btn{
   font-weight: 700;
   font-size: 1rem;
   color: white;
@@ -168,6 +182,12 @@ footer p {
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
+  border: none;
+}
+
+.filter-small{
+  font-size: 0.8125rem;
+  padding: 0.6em 0.75em !important;
 }
 
 .clear-filters-btn{
@@ -175,6 +195,8 @@ footer p {
   color: var(--dark-gray);
   font-weight: 500;
   text-decoration: underline;
+  background: none;
+  border: none;
 }
 
 
@@ -259,9 +281,156 @@ footer p {
 
 
 
+/* Host Vans */
+
+.host-vans-title{
+  font-size: 2rem;
+  color: var(--text-color-primary);
+  font-weight: 700;
+}
+
+.host-van-name{
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.58;
+  color: var(--text-color-primary);
+}
+
+.host-van-price{
+  font-size: 1rem;
+  color: var(--dark-gray);
+  font-weight: 500;
+  line-height: 2;
+}
 
 
 
+/* Host Van Details */
+
+
+.host-van-details-name{
+  font-size: 1.625rem;
+  color: var(--text-color-primary);
+  font-weight: 700;
+}
+
+.host-van-details-price{
+  color: var(--text-color-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.host-van-details-price span{
+  color: var(--text-color-primary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.host-van-details-nav a{
+  color: var(--dark-gray);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.host-van-details-nav a:hover,
+.host-van-details-nav a:focus{
+  color: var(--text-color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+/* Host Van Info */
+
+.host-van-details-details p{
+  color: var(--text-color-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.host-van-details-details p span{
+  font-weight: 500;
+}
+
+
+
+/* Host Van Pricing */
+
+.host-van-pricing p{
+  color: var(--text-color-primary);
+  font-size: 1.5rem;
+  font-weight: 500;  
+}
+
+.host-van-pricing p span{
+  color: var(--dark-gray);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+
+.host-van-photos img{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+
+
+
+/* 404 Page */
+
+.not-found-container h2{
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.31;
+  color: var(--text-color-primary);
+}
+
+
+
+/* Login Page */
+
+
+.login-container{
+  text-align: center;
+}
+
+.login-container  h2{
+  color: var(--text-color-primary);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
+.login-container button{
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+
+.login-container p{
+    color: var(--text-color-primary);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.login-container p span a{
+  color: #ff8c38;
+  font-size: 1rem;
+  font-weight: 700;
+}    
+
+
+.login-container .log-in-message{
+  color: red;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+}
 
 
 
@@ -310,7 +479,7 @@ footer p {
   margin: 0;
 }
 
-.explore-btn{
+.secondary-btn{
   border-radius: 10px;
   background: var(--text-color-primary);
   padding: 0.75em 1.375em;
@@ -318,6 +487,12 @@ footer p {
   display: block;
   width: fit-content;
   margin-top:1.5em ;
+}
+
+.block-btn{
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 
@@ -441,4 +616,197 @@ footer p {
 
 .van-details-desc{
   margin: 0 0 0.5em;
+}
+
+
+
+/* Host */
+
+
+/* Host Nav */
+
+.host-nav{
+  display: flex;
+  gap:1.8125em;
+}
+
+.host-nav a{
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-size: var(--text-color-primary);
+  margin: 2em 0 2.8125em;
+}
+
+.host-nav a:hover{
+  text-decoration: underline;
+}
+
+ 
+
+
+/* Host Van */
+
+
+.host-vans{
+  margin: 3.5em 0;
+  min-height: 600px;
+}
+
+.host-vans-title{
+  margin: 0 0 1em;
+}
+
+.host-van-container{
+   padding: 1em 1.5em;
+   width: 100%;
+   background: white;
+   border-radius: 5px;
+   margin-bottom: 1em;
+}
+
+.host-van-container a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.host-van-img{
+  width: 65px;
+  height: 65px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+
+.host-van-info{
+  margin-left: 1em;
+}
+
+
+.host-van-name{
+  margin: 0;
+}
+
+.host-van-price{
+  margin: 0;
+}
+
+
+/* Host Van Details */
+
+.host-van-details-container{
+  border-radius: 5px;
+  padding:1.5em;
+  background: white;
+  margin-bottom: 2.8125em;
+}
+
+
+.host-van-details{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+
+.host-van-details img{
+  width: 160px;
+  height: 160px;
+  border-radius: 5px;
+}
+
+.host-van-details-info{
+  margin-left: 1.25em;
+}
+
+.host-van-details-name,
+.host-van-details-price{
+  margin: 0.7em 0 0;
+}
+
+
+.host-van-details-nav a{
+  text-decoration: none;
+  margin-right: 1.5em;
+}
+
+
+
+
+
+/* Host Van Info */
+
+.host-van-details-details{
+  margin: 1.6875em 0 0;
+}
+
+.host-van-details-details p {
+  margin: 1.15em 0;
+}
+
+
+
+/* Host Van Pricing */
+
+.host-van-pricing{
+  margin: 2.75em 0 1.25em;
+}
+
+
+/* Host Van Photos */
+
+.host-van-photos{
+  margin: 1.5em 0 0;
+}
+
+
+/* 404 Page */
+
+
+.not-found-container{
+  display: grid;
+  place-content: center;
+  min-height: 600px;
+}
+
+
+
+/* Login Page */
+
+.login-container{
+  margin-block: 3.1875em 4.6875em;
+}
+
+.login-container h2{
+  margin-bottom: 1.5em  ;
+}
+
+.login-container input{
+  display: block;
+  width: 100%;
+  padding: 0.75em 1em;
+  margin: 0;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--dark-gray);
+}
+
+.login-container input:first-of-type{
+  border-radius: 6px 6px 0px 0px;
+  border-bottom: none;
+}
+
+
+.login-container input:last-of-type{
+  border-radius: 0px 0px 6px 6px;
+}
+
+
+.login-container button{
+  margin: 1.375em 0 3em;
+  padding: 1.125em 0;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background: #FF8C38;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }

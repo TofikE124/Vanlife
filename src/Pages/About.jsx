@@ -18,7 +18,7 @@ export default function About(){
 
                 <div className="about-footer">
                     <p>Your destination is waiting.<br />Your van is ready.</p>
-                    <Link className="explore-btn">Explore our vans</Link>
+                    <Link className="secondary-btn">Explore our vans</Link>
                 </div>
             </div>
         </div>

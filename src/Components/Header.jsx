@@ -1,15 +1,31 @@
 import React from "react"
-import { Link } from "react-router-dom"
-
+import { Link, NavLink } from "react-router-dom"
+import ProfilePic from '../assets/ProfilePic.png'
 
 export default function Header(){
+
+
+    const activeStyle = {textDecoration:'underline'}
+
     return(
         <header>
             <div className="container">
                 <nav>
-                    <Link to="/" className="title">#Vanlife</Link>
-                    <Link to="about">About</Link>
-                    <Link to="vans">Vans</Link>
+                    <NavLink  to="/" className="title">
+                        #Vanlife
+                    </NavLink>
+                    <NavLink style={({isActive})=>isActive?activeStyle:null} to="host">
+                        Host
+                    </NavLink>
+                    <NavLink style={({isActive})=>isActive?activeStyle:null} to="about">
+                        About
+                    </NavLink>
+                    <NavLink style={({isActive})=>isActive?activeStyle:null} to="vans">
+                        Vans
+                    </NavLink>
+                    <NavLink to="/login">
+                        <img src={ProfilePic} /> 
+                    </NavLink>
                 </nav>     
             </div>       
         </header>
